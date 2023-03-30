@@ -1,0 +1,17 @@
+.timeWrapper {
+    position: absolute;
+    right: 20px;
+    gap: 5px;
+}
+
+.timeText {
+    width: 100%;
+}
+
+.timeInfo {
+    gap: 15px;
+}
+
+.time {
+    gap: 5px;
+}

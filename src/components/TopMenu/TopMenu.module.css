@@ -1,0 +1,10 @@
+.header {
+    position: relative;
+    box-shadow: 0 0 5px black;
+    height: 80px;
+}
+
+.btnMenu {
+    position: absolute;
+    left: 10px;
+}

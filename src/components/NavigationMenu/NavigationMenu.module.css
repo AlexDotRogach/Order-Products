@@ -1,0 +1,9 @@
+.profileImg {
+    max-width: 60px;
+    max-height: 60px;
+    object-fit: cover;
+}
+
+.headerOffcanvas {
+    justify-content: end;
+}
