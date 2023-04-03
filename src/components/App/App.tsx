@@ -1,17 +1,26 @@
 import { lazy, Suspense } from "react";
 import { Routes, Route } from "react-router-dom";
-const SharedLayout = lazy(() => import("../../layouts/SharedLayout"));
+import SharedLayout from "../../layouts/SharedLayout";
+import Home from "../../pages/Home";
+import Loader from "../../layouts/Loader";
+
 const NotFound = lazy(() => import("../../pages/NotFound"));
-const Home = lazy(() => import("../../pages/Home"));
+const Orders = lazy(() => import("../../pages/Orders"));
+const Products = lazy(() => import("../../pages/Products"));
+const OrderDetail = lazy(() => import("../../components/OrderDetail"));
 
 function App() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/orders" element={<Orders />}>
+            <Route path=":orderId" element={<OrderDetail />}></Route>
+          </Route>
         </Route>
-        <Route path="*" element={<NotFound />} />
+        <Route path="/*" element={<NotFound />} />
       </Routes>
     </Suspense>
   );

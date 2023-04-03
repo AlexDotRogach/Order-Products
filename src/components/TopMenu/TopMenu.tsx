@@ -6,8 +6,8 @@ import { HiMenu } from "react-icons/hi";
 import NavigationMenu from "../NavigationMenu";
 import Time from "./Time";
 
-const { positionTopCenter } = cssPosition;
 const { btnMenu, header } = css;
+const { positionTopCenter } = cssPosition;
 
 function TopMenu() {
   const [show, setShow] = useState(false);

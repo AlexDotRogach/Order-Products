@@ -2,3 +2,9 @@
     top: 50%;
     transform: translateY(-50%);
 }
+
+.positionLeft {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

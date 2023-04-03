@@ -1,0 +1,4 @@
+.productWrapper {
+    display: flex;
+    gap: 15px
+}
